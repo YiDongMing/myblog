@@ -11,4 +11,5 @@ public interface ArticleMapper extends IMyMapper<Article>{
     int insertSelective(Article record);
 
     List<Article> getArticleList() throws Exception;
+
 }

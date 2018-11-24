@@ -27,6 +27,13 @@ public class ArticleServiceImpl extends ViewTransableService implements IArticle
     }
 
     @Override
+    public Article getArticleById(Integer id) throws Exception {
+        Article articleList = articleMapper.selectByPrimaryKey(id);
+        return articleList;
+    }
+
+
+    @Override
     protected List transEntityToView(List entityList) {
         List<ArticleListView> articleListViewList = new ArrayList<>();
         Iterator it = entityList.iterator();

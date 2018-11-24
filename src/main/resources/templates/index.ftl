@@ -6,8 +6,8 @@
     <meta name="author" content="">
 
     <title>易小侠的个人博客</title>
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/sliders.js"></script>
+    <script type="text/javascript" src="/js/vendor/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/js/sliders.js"></script>
 </head>
 <body>
 <#include "public/nav.ftl">
@@ -16,7 +16,7 @@
         <div class="l_box f_l">
             <div class="banner">
                 <div id="slide-holder">
-                    <div id="slide-runner"> <a href="/" target="_blank"><img id="slide-img-1" src="images/a1.jpg"  alt="" /></a> <a href="/" target="_blank"><img id="slide-img-2" src="images/a2.jpg"  alt="" /></a> <a href="/" target="_blank"><img id="slide-img-3" src="images/a3.jpg"  alt="" /></a> <a href="/" target="_blank"><img id="slide-img-4" src="images/a4.jpg"  alt="" /></a>
+                    <div id="slide-runner"> <a href="#" target="_blank"><img id="slide-img-1" src="images/a1.jpg"  alt="" /></a> <a href="#" target="_blank"><img id="slide-img-2" src="images/a2.jpg"  alt="" /></a> <a href="#" target="_blank"><img id="slide-img-3" src="images/a3.jpg"  alt="" /></a> <a href="#" target="_blank"><img id="slide-img-4" src="images/a4.jpg"  alt="" /></a>
                         <div id="slide-controls">
                             <p id="slide-client" class="text"><strong></strong><span></span></p>
                             <p id="slide-desc" class="text"></p>
@@ -74,7 +74,7 @@
         <div class="r_box f_r">
             <div class="sidebar">
                 <div class="about">
-                    <div class="avatar"> <img src="images/avatar.jpg" alt=""> </div>
+                    <div class="avatar"> <img src="/images/avatar.jpg" alt=""> </div>
                     <p class="abname">易小侠</p>
                     <p class="abposition">java开发工程师</p>
                     <div class="abtext"> 15年毕业。坐标广州。一直在java领域摸爬滚打 </div>
@@ -84,9 +84,9 @@
                 <h3>关注我</h3>
                 <div class="gzwm">
                     <ul>
-                        <li><a class="xlwb" href="#" target="_blank">新浪微博</a></li>
+                        <li><a class="csdn" href="https://blog.csdn.net/u010102390" target="_blank">CSDN博客</a></li>
                         <li><a class="rss" href="https://github.com/YiDongMing" target="_blank">GitHub</a></li>
-                        <li><a class="wx" href="978325568@qq.com">邮箱</a></li>
+                        <li><a class="wx" href="mailto:978325568@qq.com">邮箱</a></li>
                     </ul>
                 </div>
             </div>
@@ -94,6 +94,7 @@
                 <h2 class="hometitle">友情链接</h2>
                 <ul>
                     <li><a href="http://calvin1978.blogcn.com/" title="江南白衣博客">江南白衣博客</a></li>
+                    <li><a href="http://ifeve.com/" title="并发编程网">并发编程网</a></li>
                 </ul>
             </div>
         </div>

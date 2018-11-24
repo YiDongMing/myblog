@@ -162,7 +162,7 @@ h3.blogtitle { line-height: 30px; height: 30px; margin: 10px 0; }
  #slide-controls p#slide-nav a.on { background-position : 0 -24px; }
  #slide-controls p#slide-nav a { background-image : url(../images/silde-nav.png); }
  /* 关注我样式 */
- .tit01 {float:right}
+ .tit01 {float:left}
  .tit01 h3 { line-height: 40px; color: #38485A; font-size: 18px; border-bottom: 1px solid #E6E6E6; height: 40px }
  .gzwm ul { width: 100%; margin: 30px 0; overflow: hidden }
  .gzwm li { width: 52px; margin: 0 18px 0 5px; float: left; }
@@ -171,7 +171,7 @@ h3.blogtitle { line-height: 30px; height: 30px; margin: 10px 0; }
  .gzwm .rss:hover { color: #000; background: url(../images/ico_04.png) no-repeat scroll 0% 0% transparent; }
  .gzwm .xlwb { background: url(../images/ico_05_1.jpg) no-repeat scroll 0% 0% transparent; }
  .gzwm .xlwb:hover { color: #000; background: url(../images/ico_05.png) no-repeat scroll 0% 0% transparent; }
- .gzwm .txwb { background: url(../images/ico_06_1.jpg) no-repeat scroll 0% 0% transparent; }
- .gzwm .txwb:hover { color: #000; background: url(../images/ico_06.png) no-repeat scroll 0% 0% transparent; }
+ .gzwm .csdn { background: url(../images/ico_08_1.jpg) no-repeat scroll 0% 0% transparent; }
+ .gzwm .csdn:hover { color: #000; background: url(../images/ico_08.jpg) no-repeat scroll 0% 0% transparent; }
  .gzwm .wx { background: url(../images/ico_07_1.jpg) no-repeat scroll 0% 0% transparent; }
  .gzwm .wx:hover { color: #000; background: url(../images/ico_07.png) no-repeat scroll 0% 0% transparent; }

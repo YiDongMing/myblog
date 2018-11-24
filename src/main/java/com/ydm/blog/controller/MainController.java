@@ -32,4 +32,10 @@ public class MainController extends BaseController{
         }
         return "index";
     }
+
+    @GetMapping("/aboutme")
+    public String aboutme(HttpServletRequest request,Model model){
+        return "aboutme";
+    }
+
 }

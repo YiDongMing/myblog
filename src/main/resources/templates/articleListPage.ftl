@@ -10,32 +10,52 @@
 </head>
 <body>
 <#include "public/nav.ftl">
-articleList
-<div class="col-md-8">
-    <ul class="list-unstyled">
+<article>
+    <div class="l_box f_l">
+        <div class="blogs">
             <#if articleList??>
                 <#if (articleList?size>0)>
                     <#list articleList as post>
-                        <div class="card mt-3">
-                            <div class="card-body">
-                                <a href="/blog/${post.id!""}" class="text-dark" target="_blank"><h4
-                                        class="card-title font-weight-bold">${post.title!""}</h4>
-                                </a>
-                                <p class="card-text">${post.summary}</p>
-                                <p class="text-right text-secondary">${post.dateTime!""}</p>
+                        <li> <span class="blogpic"><a href="/article/${post.id!""}"><img src="${post.titleImg!""}"></a></span>
+                            <h3 class="blogtitle"><a href="/article/${post.id!""}">${post.title!""}</a></h3>
+                            <div class="bloginfo">
+                                <p>${post.summary}</p>
                             </div>
-                        </div>
+                            <div class="autor"><span class="lm"><a href="/" title="易小侠" target="_blank" class="classname">易小侠</a></span><span class="dtime">${post.createtime}</span><span class="readmore"><a href="/">阅读原文</a></span></div>
+                        </li>
                     </#list>
-                <#else>
-                    <div class="card border-danger mt-3 mb-3">
-                        <div class="card-body text-danger">
-                            <h2 class="card-title"><i class="fa fa-warning fa-1x"></i> 抱歉，没有找到相关内容</h2>
-                            <p class="card-text">试试其他关键字？</p>
-                        </div>
-                    </div>
                 </#if>
             </#if>
-    </ul>
-</div>
-<input type = "text" id=""/>
+        </div>
+    </div>
+    <div class="r_box f_r">
+        <div class="sidebar">
+            <div class="about">
+                <div class="avatar"> <img src="/images/avatar.jpg" alt=""> </div>
+                <p class="abname">易小侠</p>
+                <p class="abposition">java开发工程师</p>
+                <div class="abtext"> 15年毕业。坐标广州。一直在java领域摸爬滚打 </div>
+            </div>
+        </div>
+        <div class="tit01">
+            <h3>关注我</h3>
+            <div class="gzwm">
+                <ul>
+                    <li><a class="csdn" href="https://blog.csdn.net/u010102390" target="_blank">CSDN博客</a></li>
+                    <li><a class="rss" href="https://github.com/YiDongMing" target="_blank">GitHub</a></li>
+                    <li><a class="wx" href="mailto:978325568@qq.com">邮箱</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="links">
+            <h2 class="hometitle">友情链接</h2>
+            <ul>
+                <li><a href="http://calvin1978.blogcn.com/" title="江南白衣博客">江南白衣博客</a></li>
+                <li><a href="http://ifeve.com/" title="并发编程网">并发编程网</a></li>
+            </ul>
+        </div>
+    </div>
+</article>
+<#include "public/footer.ftl">
 </body>
+</html>
