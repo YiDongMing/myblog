@@ -37,13 +37,11 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>-->
 
-        <table tableName="article" domainObjectName="Article"
+        <table tableName="visitor_message" domainObjectName="VisitorMessage"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
-            <columnOverride column="summary" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <columnOverride column="html_content" javaType="java.lang.String" jdbcType="VARCHAR" />
-            <columnOverride column="content" javaType="java.lang.String" jdbcType="VARCHAR" />
+            <!--<columnOverride column="summary" javaType="java.lang.String" jdbcType="VARCHAR" />-->
             <!--<columnRenamingRule searchString="^D_"
                                 replaceString=""/>-->
         </table>

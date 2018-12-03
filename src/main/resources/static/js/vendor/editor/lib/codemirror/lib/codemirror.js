@@ -2448,7 +2448,7 @@
     }
   }
 
-  // Find a line map (mapping character offsets to text nodes) and a
+  // Find a line map (mapper character offsets to text nodes) and a
   // measurement cache for the given line number. (A line view might
   // contain multiple lines when collapsed ranges are present.)
   function mapFromLineView(lineView, line, lineN) {

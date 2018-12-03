@@ -52,19 +52,19 @@ public class MyBatisAutoConfiguration {
     @Bean(name = "sqlSessionFactory")
     @ConditionalOnMissingBean
     public SqlSessionFactory sqlSessionFactory(HikariDataSource dataSource)throws Exception{
-        SqlSessionFactoryBean factory = new SqlSessionFactoryBean();
-        factory.setDataSource(dataSource);
+        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+        sqlSessionFactory.setDataSource(dataSource);
         if(StringUtils.hasText(this.properties.getConfig())) {
-            factory.setConfigLocation(this.resourceLoader.getResource(this.properties.getConfig()));;
+            sqlSessionFactory.setConfigLocation(this.resourceLoader.getResource(this.properties.getConfig()));;
         }else{
             if(this.interceptors !=null && this.interceptors.length > 0){
-                factory.setPlugins(this.interceptors);
+                sqlSessionFactory.setPlugins(this.interceptors);
             }
-            factory.setTypeAliasesPackage(this.properties.getTypeAliasesPackage());
-            factory.setTypeHandlersPackage(this.properties.getTypeHandlersPackage());
-            factory.setMapperLocations(this.properties.getMapperLocations());
+            sqlSessionFactory.setTypeAliasesPackage(this.properties.getTypeAliasesPackage());
+            sqlSessionFactory.setTypeHandlersPackage(this.properties.getTypeHandlersPackage());
+            sqlSessionFactory.setMapperLocations(this.properties.getMapperLocations());
         }
-        return factory.getObject();
+        return sqlSessionFactory.getObject();
     }
 
     @Bean

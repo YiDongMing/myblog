@@ -18,7 +18,7 @@
                 <span>作者：易小侠</span>
             </p>
             <div class="content">${article.htmlContent}</div>
-            <p style="color: red;">版权声明：本文版权归作者（易小侠）所有，欢迎转载。但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。</p>
+            <p style="color: red;">版权声明：本文版权归本网站作者所有，欢迎转载。但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。</p>
         </div>
     </div>
     <div class="r_box f_r">

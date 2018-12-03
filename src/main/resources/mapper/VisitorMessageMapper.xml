@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ydm.blog.mapper.VisitorMessageMapper" >
+  <resultMap id="BaseResultMap" type="com.ydm.blog.entity.VisitorMessage" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="info" property="info" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+  </resultMap>
+  <!--<insert id="insert" parameterType="com.ydm.blog.entity.VisitorMessage" >
+    insert into t_visitor_message (id, info, name, 
+      create_time, area)
+    values (#{id,jdbcType=INTEGER}, #{info,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+      #{createTime,jdbcType=TIMESTAMP}, #{area,jdbcType=VARCHAR})
+  </insert>-->
+  <!--<insert id="insertSelective" parameterType="com.ydm.blog.entity.VisitorMessage" >
+    insert into t_visitor_message
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="info != null" >
+        info,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="info != null" >
+        #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>-->
+</mapper>

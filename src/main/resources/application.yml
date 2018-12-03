@@ -1,27 +1,3 @@
-server:
-  port: 8082
 spring:
-     datasource:
-         name: blogsql
-         url: jdbc:mysql://127.0.0.1:3306/myblog?serverTimezone=UTC
-         username: root
-         password: 123456
-         dbcp2:
-           driver-class-name: com.mysql.jdbc.Driver
-     freemarker:
-       allow-request-override: false
-       cache: false
-       check-template-location: true
-       charset: utf-8
-       content-type: text/html
-       expose-request-attributes: false
-       expose-session-attributes: false
-       expose-spring-macro-helpers: false
-       suffix: .ftl
-       template-loader-path: classpath:/templates
-       template_update_delay: 0
-
-mybatis:
-  type-aliases-package: com.ydm.blog.entity
-  mapper-locations: classpath:/mapper/ArticleMapper.xml
-
+  profiles:
+    active: dev

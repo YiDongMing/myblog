@@ -1,7 +1,9 @@
 package com.ydm.blog.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.ydm.blog.config.RemoteProperties;
 import com.ydm.blog.entity.Article;
+import com.ydm.blog.entity.dto.form.AddArticleForm;
 import com.ydm.blog.entity.vo.ArticleListView;
 import com.ydm.blog.service.IArticleService;
 import org.slf4j.Logger;
@@ -9,11 +11,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -24,6 +27,8 @@ public class ArticleController extends BaseController{
 
     @Autowired
     IArticleService iArticleService;
+    @Autowired
+    RemoteProperties remoteProperties;
 
     @GetMapping("/articleList")
     public String getAllArticleList(HttpServletRequest request, Model model){
@@ -61,7 +66,7 @@ public class ArticleController extends BaseController{
     @PostMapping("/articleImages")
     public String getArticleImages(HttpServletRequest request,@RequestParam(value = "editormd-image-file",required = false) MultipartFile file){
         JSONObject res = new JSONObject();
-        String uploadPath = "E:\\myproject\\myblog\\src\\main\\resources\\static\\images\\uploadimages\\";
+        String uploadPath = remoteProperties.getImagesPath();
 
         try {
             file.transferTo(new File(uploadPath+file.getOriginalFilename()));
@@ -76,9 +81,15 @@ public class ArticleController extends BaseController{
         return res.toString();
     }
 
+    @ResponseBody
     @PostMapping("/addArticle")
-    public String addArticle(Article article){
-        return null;
+    public Object addArticle(@Valid AddArticleForm addArticleForm,BindingResult bindingResult) throws Exception {
+        if(bindingResult.hasErrors()){
+            return bindingResult.getFieldError().getDefaultMessage();
+        }else{
+            iArticleService.addArticle(addArticleForm);
+            return responseSimpleOK();
+        }
     }
 
 

@@ -58,12 +58,12 @@
             <#if articleList??>
                 <#if (articleList?size>0)>
                     <#list articleList as post>
-                        <li> <span class="blogpic"><a href="/"><img src="${post.titleImg!""}"></a></span>
-                            <h3 class="blogtitle"><a href="/">${post.title!""}</a></h3>
+                        <li> <span class="blogpic"><a href="/article/${post.id!""}"><img src="${post.titleImg!""}"></a></span>
+                            <h3 class="blogtitle"><a href="/article/${post.id!""}">${post.title!""}</a></h3>
                             <div class="bloginfo">
                                 <p>${post.summary}</p>
                             </div>
-                            <div class="autor"><span class="lm"><a href="/" title="易小侠" target="_blank" class="classname">易小侠</a></span><span class="dtime">${post.createtime}</span><span class="readmore"><a href="/">阅读原文</a></span></div>
+                            <div class="autor"><span class="lm"><a href="/" title="易小侠" target="_blank" class="classname">易小侠</a></span><span class="dtime">${post.createtime}</span></div>
                         </li>
                     </#list>
                 </#if>

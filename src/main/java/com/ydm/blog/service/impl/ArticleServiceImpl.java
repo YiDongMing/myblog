@@ -1,14 +1,15 @@
 package com.ydm.blog.service.impl;
 
 import com.ydm.blog.entity.Article;
+import com.ydm.blog.entity.dto.form.AddArticleForm;
 import com.ydm.blog.entity.vo.ArticleListView;
 import com.ydm.blog.mapper.ArticleMapper;
 import com.ydm.blog.service.IArticleService;
 import com.ydm.blog.service.base.ViewTransableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -32,6 +33,16 @@ public class ArticleServiceImpl extends ViewTransableService implements IArticle
         return articleList;
     }
 
+    @Override
+    @Transactional
+    public void addArticle(AddArticleForm addArticleForm) throws Exception {
+        Article article = new Article();
+        article.setTitle(addArticleForm.getTitle());
+        article.setSummary(addArticleForm.getSummary());
+        article.setContent(addArticleForm.getArticleContent());
+        article.setHtmlContent(addArticleForm.getArticleHtmlContet());
+        articleMapper.insertSelective(article);
+    }
 
     @Override
     protected List transEntityToView(List entityList) {
