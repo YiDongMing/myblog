@@ -10,11 +10,11 @@ import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import java.util.Properties;
 
-@Configuration
-@AutoConfigureAfter(MybatisAutoConfiguration.class)
+//@Configuration
+//@AutoConfigureAfter(MybatisAutoConfiguration.class)
 public class MyBatisMapperScannerConfig {
 
-    @Bean
+   // @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");

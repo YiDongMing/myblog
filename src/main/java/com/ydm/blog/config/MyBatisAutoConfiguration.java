@@ -49,8 +49,8 @@ public class MyBatisAutoConfiguration {
         }
     }
 
-    @Bean(name = "sqlSessionFactory")
-    @ConditionalOnMissingBean
+   // @Bean(name = "sqlSessionFactory")
+    //@ConditionalOnMissingBean
     public SqlSessionFactory sqlSessionFactory(HikariDataSource dataSource)throws Exception{
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(dataSource);
@@ -67,8 +67,8 @@ public class MyBatisAutoConfiguration {
         return sqlSessionFactory.getObject();
     }
 
-    @Bean
-    @ConditionalOnMissingBean
+    //@Bean
+   // @ConditionalOnMissingBean
     public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory){
         return new SqlSessionTemplate(sqlSessionFactory,this.properties.getExecutorType());
     }

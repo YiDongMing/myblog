@@ -21,4 +21,4 @@ spring:
     template-loader-path: classpath:/templates
 mybatis:
   type-aliases-package: com.ydm.blog.entity
-  mapper-locations: classpath:mapper/ArticleMapper.xml
+  mapper-locations: classpath*:mapper/*.xml
