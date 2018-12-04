@@ -1,13 +1,13 @@
 package com.ydm.blog;
 
-import org.mybatis.spring.annotation.MapperScan;
+import tk.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-@MapperScan("com.ydm.blog.mapper")
+@MapperScan(basePackages = {"com.ydm.blog.mapper"})
 public class BlogApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
