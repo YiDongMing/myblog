@@ -6,6 +6,7 @@
     <meta name="author" content="">
 
     <title>易小侠的个人博客</title>
+    <link rel="stylesheet" href="/js/vendor/editor/css/editormd.css"/>
 </head>
 <body>
 <#include "public/nav.ftl">
@@ -14,7 +15,7 @@
         <div class="a_info">
             <h2 class="a_title">${article.title}</h2>
             <p class="a_box">
-                <span class="a_time">发布时间${article.createtime?string('yyyy-MM-dd HH:mm:ss')}</span>
+                <span class="a_time">发布时间: ${article.createtime?string('yyyy-MM-dd HH:mm:ss')}</span>
                 <span>作者：易小侠</span>
             </p>
             <div class="content">${article.htmlContent}</div>

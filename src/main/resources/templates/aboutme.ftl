@@ -31,7 +31,7 @@
             </p>
             <p>
                 本博客采用springboot+mybatis+freemaker+maven来开发的，数据库是mysql。源码在github上面。欢迎大家使用。
-                如果有java技术相关问题或者博客搭建问题想讨论的同学可以加QQ群：807734995
+                如果有java技术相关问题或者博客搭建问题想讨论的同学可以在留言板发言或者加  QQ群：807734995
             </p>
         </div>
     </div>

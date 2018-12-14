@@ -11,12 +11,11 @@
 </head>
 <body>
 <#include "public/nav.ftl">
-<header>
     <article>
         <div class="l_box f_l">
             <div class="banner">
                 <div id="slide-holder">
-                    <div id="slide-runner"> <a href="#" target="_blank"><img id="slide-img-1" src="images/a1.jpg"  alt="" /></a> <a href="#" target="_blank"><img id="slide-img-2" src="images/a2.jpg"  alt="" /></a> <a href="#" target="_blank"><img id="slide-img-3" src="images/a3.jpg"  alt="" /></a> <a href="#" target="_blank"><img id="slide-img-4" src="images/a4.jpg"  alt="" /></a>
+                    <div id="slide-runner"> <a href="/article/2" target="_blank"><img id="slide-img-1" src="images/a1.jpg"  alt="" /></a> <a href="/article/6" target="_blank"><img id="slide-img-2" src="images/a2.jpg"  alt="" /></a> <a href="/article/8" target="_blank"><img id="slide-img-3" src="images/a3.jpg"  alt="" /></a> <a href="/article/9" target="_blank"><img id="slide-img-4" src="images/a4.jpg"  alt="" /></a>
                         <div id="slide-controls">
                             <p id="slide-client" class="text"><strong></strong><span></span></p>
                             <p id="slide-desc" class="text"></p>
@@ -32,23 +31,23 @@
                     slider.data= [
                         {
                             "id":"slide-img-1", // 与slide-runner中的img标签id对应
-                            "client":"标题1",
-                            "desc":"这里修改描述 这里修改描述 这里修改描述" //这里修改描述
+                            "client":"设计模式",
+                            "desc":"java建造者模式--给一个你一看就懂的建造者模式" //这里修改描述
                         },
                         {
                             "id":"slide-img-2",
-                            "client":"标题2",
-                            "desc":"add your description here"
+                            "client":"WdatePicker插件",
+                            "desc":"使用WdatePicker插件如何设定2个时间在都在同一天"
                         },
                         {
                             "id":"slide-img-3",
-                            "client":"标题3",
-                            "desc":"add your description here"
+                            "client":"java",
+                            "desc":"java内存分配看书笔记分享"
                         },
                         {
                             "id":"slide-img-4",
-                            "client":"标题4",
-                            "desc":"add your description here"
+                            "client":"设计模式",
+                            "desc":"java单例模式-面试出现概率最大的模式"
                         }
                     ];
 
@@ -99,8 +98,6 @@
             </div>
         </div>
     </article>
-<div class="blank"></div>
-</header>
 <#include "public/footer.ftl">
 </body>
 </html>

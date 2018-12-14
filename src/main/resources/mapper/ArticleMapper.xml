@@ -75,6 +75,9 @@
     </trim>
   </insert>
   <select id="getArticleList" resultMap="BaseResultMap" parameterType="com.ydm.blog.entity.Article">
-    SELECT * from article
+    SELECT * from article ORDER BY createtime DESC
+  </select>
+  <select id="getArticleListOfIndex" resultMap="BaseResultMap" parameterType="com.ydm.blog.entity.Article">
+    SELECT * from article ORDER BY createtime DESC LIMIT 0,3
   </select>
 </mapper>

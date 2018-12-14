@@ -12,4 +12,6 @@ public interface ArticleMapper extends IMyMapper<Article>{
 
     List<Article> getArticleList() throws Exception;
 
+    List<Article> getArticleListOfIndex() throws Exception;
+
 }

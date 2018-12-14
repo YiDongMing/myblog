@@ -48,6 +48,7 @@ public class ArticleController extends BaseController{
         Article article = new Article();
         article = iArticleService.getArticleById(id);
         addModelAtt(model,"article",article);
+        int result = iArticleService.updateCount(id);
         return "article";
     }
 
@@ -72,7 +73,7 @@ public class ArticleController extends BaseController{
             file.transferTo(new File(uploadPath+file.getOriginalFilename()));
             res.put("success", 1);
             res.put("message", "上传成功");
-            res.put("url","/images/uplocadimages/"+file.getOriginalFilename());
+            res.put("url","/images/"+file.getOriginalFilename());
         } catch (IOException e) {
             logger.error("上传图片异常", e.getMessage());
             res.put("success", 0);

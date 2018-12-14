@@ -47,7 +47,7 @@ public class MainController extends BaseController{
         List<ArticleListView> articleList = null;
         model.addAttribute("name", "ydm");
         try {
-            articleList = iArticleService.getArticleList();
+            articleList = iArticleService.getArticleListOfIndex();
             addModelAtt(model, "articleList", articleList);
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,7 +59,7 @@ public class MainController extends BaseController{
     public String indexPage(HttpServletRequest request, Model model){
         List<ArticleListView> articleList = null;
         try {
-            articleList = iArticleService.getArticleList();
+            articleList = iArticleService.getArticleListOfIndex();
             addModelAtt(model, "articleList", articleList);
         } catch (Exception e) {
             e.printStackTrace();

@@ -16,6 +16,7 @@ public class ArticleListView {
     private String titleImg;
     private String summary;
     private String createtime;
+    private Integer count;
 
     public ArticleListView(Article article){
         id = article.getId();

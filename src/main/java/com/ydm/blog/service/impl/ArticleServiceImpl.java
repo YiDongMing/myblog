@@ -3,6 +3,7 @@ package com.ydm.blog.service.impl;
 import com.ydm.blog.entity.Article;
 import com.ydm.blog.entity.dto.form.AddArticleForm;
 import com.ydm.blog.entity.vo.ArticleListView;
+import com.ydm.blog.mapper.ArticleCountMapper;
 import com.ydm.blog.mapper.ArticleMapper;
 import com.ydm.blog.service.IArticleService;
 import com.ydm.blog.service.base.ViewTransableService;
@@ -19,10 +20,19 @@ public class ArticleServiceImpl extends ViewTransableService implements IArticle
 
     @Autowired
     ArticleMapper articleMapper;
+    @Autowired
+    ArticleCountMapper articleCountMapper;
 
     @Override
     public List<ArticleListView> getArticleList() throws Exception{
         List<Article> articleList = articleMapper.getArticleList();
+        List<ArticleListView> articleListViews = transEntityToView(articleList);
+        return articleListViews;
+    }
+
+    @Override
+    public List<ArticleListView> getArticleListOfIndex() throws Exception {
+        List<Article> articleList = articleMapper.getArticleListOfIndex();
         List<ArticleListView> articleListViews = transEntityToView(articleList);
         return articleListViews;
     }
@@ -54,5 +64,10 @@ public class ArticleServiceImpl extends ViewTransableService implements IArticle
             articleListViewList.add(articleListView);
         }
         return articleListViewList;
+    }
+
+    @Override
+    public int updateCount(Integer id) throws Exception {
+        return articleCountMapper.updateCount(id);
     }
 }

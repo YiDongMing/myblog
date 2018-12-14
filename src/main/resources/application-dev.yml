@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     name: blogsql
-    url: jdbc:mysql://127.0.0.1:3306/myblog?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/myblog?serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: 199210
     dbcp2:
       driver-class-name: com.mysql.jdbc.Driver
   freemarker:
