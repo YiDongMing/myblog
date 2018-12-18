@@ -24,6 +24,8 @@ public class Article {
 
     private String titleImg;
 
+    private Integer viewCount;
+
     public Integer getId() {
         return id;
     }
@@ -86,5 +88,13 @@ public class Article {
 
     public void setTitleImg(String titleImg) {
         this.titleImg = titleImg;
+    }
+
+    public Integer getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(Integer viewCount) {
+        this.viewCount = viewCount;
     }
 }

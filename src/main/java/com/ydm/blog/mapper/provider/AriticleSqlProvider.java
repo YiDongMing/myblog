@@ -6,9 +6,9 @@ import org.apache.ibatis.jdbc.SQL;
 public class AriticleSqlProvider {
     public String updateCount(Integer id){
         return new SQL(){{
-            UPDATE("article_count");
-            SET("count = count +1 ");
-            WHERE("article_id = #{id}");
+            UPDATE("article");
+            SET("view_count = view_count +1 ");
+            WHERE("id = #{id}");
         }}.toString();
     }
 }

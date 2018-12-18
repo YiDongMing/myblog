@@ -3,7 +3,6 @@ package com.ydm.blog.service.impl;
 import com.ydm.blog.entity.Article;
 import com.ydm.blog.entity.dto.form.AddArticleForm;
 import com.ydm.blog.entity.vo.ArticleListView;
-import com.ydm.blog.mapper.ArticleCountMapper;
 import com.ydm.blog.mapper.ArticleMapper;
 import com.ydm.blog.service.IArticleService;
 import com.ydm.blog.service.base.ViewTransableService;
@@ -20,8 +19,6 @@ public class ArticleServiceImpl extends ViewTransableService implements IArticle
 
     @Autowired
     ArticleMapper articleMapper;
-    @Autowired
-    ArticleCountMapper articleCountMapper;
 
     @Override
     public List<ArticleListView> getArticleList() throws Exception{
@@ -68,6 +65,6 @@ public class ArticleServiceImpl extends ViewTransableService implements IArticle
 
     @Override
     public int updateCount(Integer id) throws Exception {
-        return articleCountMapper.updateCount(id);
+        return articleMapper.updateCount(id);
     }
 }

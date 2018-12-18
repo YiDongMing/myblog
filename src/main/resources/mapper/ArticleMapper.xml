@@ -10,14 +10,15 @@
     <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
     <result column="modifiedtime" property="modifiedtime" jdbcType="TIMESTAMP" />
     <result column="title_img" property="titleImg" jdbcType="VARCHAR" />
+    <result column="view_count" property="viewCount" jdbcType="INTEGER" />
   </resultMap>
   <insert id="insert" parameterType="com.ydm.blog.entity.Article" >
     insert into article (id, title, summary, 
       html_content, content, createtime, 
-      modifiedtime,title_img)
+      modifiedtime,title_img,view_count)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, 
       #{htmlContent,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
-      #{modifiedtime,jdbcType=TIMESTAMP},#{titleImg,jdbcType=VARCHAR})
+      #{modifiedtime,jdbcType=TIMESTAMP},#{titleImg,jdbcType=VARCHAR},#{viewCount,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.ydm.blog.entity.Article" >
     insert into article
@@ -46,6 +47,9 @@
       <if test="titleImg != null" >
         title_img,
       </if>
+      <if test="viewCount != null" >
+        view_count,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -71,6 +75,9 @@
       </if>
       <if test="titleImg != null" >
         #{titleImg,jdbcType=VARCHAR},
+      </if>
+      <if test="viewCount != null" >
+        #{viewCount,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>

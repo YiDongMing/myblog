@@ -24,6 +24,7 @@ public class ArticleListView {
         titleImg = article.getTitleImg();
         summary = article.getSummary();
         createtime = DateFormatUtils.format(article.getCreatetime(), "yyyy-MM-dd HH:mm");
+        count = article.getViewCount();
     }
 
 }

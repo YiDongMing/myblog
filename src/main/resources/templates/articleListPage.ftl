@@ -21,7 +21,7 @@
                             <div class="bloginfo">
                                 <p>${post.summary}</p>
                             </div>
-                            <div class="autor"><span class="lm"><a href="/" title="易小侠" target="_blank" class="classname">易小侠</a></span><span class="dtime">${post.createtime}</span></div>
+                            <div class="autor"><span class="lm"><a href="/" title="易小侠" target="_blank" class="classname">易小侠</a></span><span class="dtime">${post.createtime}</span><span class="viewnum">浏览（${post.count!""}）</span></div>
                         </li>
                     </#list>
                 </#if>

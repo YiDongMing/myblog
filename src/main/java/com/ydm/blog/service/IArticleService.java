@@ -15,5 +15,6 @@ public interface IArticleService {
     Article getArticleById(Integer id) throws Exception;
 
     void addArticle(AddArticleForm addArticleForm) throws Exception;
+
     int updateCount(Integer id)throws Exception;
 }
